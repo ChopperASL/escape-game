@@ -1,23 +1,30 @@
-document.addEventListener('DOMContentLoaded', () => {
-    function jouer() {
-        window.location.href = "level1.html";
+function jouer() {
+    window.location.href = "level1.html";
+}
+
+function afficher(type) {
+    const popup = document.getElementById('popup');
+    let content = "";
+
+    switch (type) {
+        case 'regles':
+            content = `
+                <h2>Règles du jeu</h2>
+                <p>Tu as 10 minutes pour t'échapper de la maison de Granny. Trouve les clés, évite les pièges... Et surtout, ne fais pas de bruit !</p>
+            `;
+            break;
+        case 'credits':
+            content = `
+                <h2>Crédits</h2>
+                <p>Développé par Julie Lefebvre & Loïc Bier.<br/>Inspiré de l'univers horrifique de Granny.<br/>Merci de jouer !</p>
+            `;
+            break;
     }
 
-    function afficher(type) {
-        const popup = document.getElementById('popup');
-        let content = "";
+    popup.innerHTML = content;
+    popup.style.display = "block";
 
-        if (type === 'regles') {
-            content = "<h2>Règles</h2> <p>Échappe-toi de la maison de Granny en moins de 10 minutes. Trouve les clés, évite les pièges, et ne fais pas de bruit !</p>";
-        } else if (type === 'credits') {
-            content = "<h2>Crédits</h2><p>Développé par Julie Lefebvre et Loïc Bier. Ce jeu est une création originale inspirée par l'univers d'Escape Game. Merci d'être curieux !</p>";
-        }
-
-        popup.innerHTML = content;
-        popup.style.display = "block";
-
-        setTimeout(() => {
-            popup.style.display = "none";
-        }, 7000);
-    }
-});
+    setTimeout(() => {
+        popup.style.display = "none";
+    }, 8000);
+}

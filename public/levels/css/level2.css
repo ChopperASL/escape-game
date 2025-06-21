@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: sans-serif;
+  color: #fff;
+}
+
+.container {
+  position: relative;
+}
+
+#porte {
+  width: 900px;
+  height: auto;
+  display: block;
+}
+
+/* les zones cliquables du simon */
+.zone {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  opacity: 0.2;
+  cursor: pointer;
+  transition: opacity 0.3s, background-color 0.3s;
+}
+
+.zone[data-id="0"] { top: 40px; left: 40px; background-color: red; }
+.zone[data-id="1"] { top: 40px; right: 40px; background-color: green; }
+.zone[data-id="2"] { bottom: 40px; left: 40px; background-color: blue; }
+.zone[data-id="3"] { bottom: 40px; right: 40px; background-color: yellow; }
+
+.zone.active {
+  opacity: 1;
+  box-shadow: 0 0 20px white;
+}
+
+#message {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1.2rem;
+}
