@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: sans-serif;
+  background: #111;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#maze {
+  display: grid;
+  grid-template-columns: repeat(15, 30px);
+  grid-template-rows: repeat(15, 30px);
+  gap: 1px;
+}
+
+.cell {
+  width: 30px;
+  height: 30px;
+  background-color: #444;
+}
+
+.wall {
+  background-color: #222;
+}
+
+.player {
+  background-color: red;
+}
+
+.exit {
+  background-color: limegreen;
+}
+
+
+#message {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: yellow;
+}
