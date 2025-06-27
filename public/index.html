@@ -4,22 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Escape Game Granny</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/styles.css">
   <script src="../src/utils/index.js" defer></script>
 </head>
 <body>
   <div id="fond"></div>
 
+  <div id="timer">00:00</div>
   <div class="overlay">
     <h1 class="titre">ESCAPE FROM GRANNY</h1>
 
     <div class="menu">
-      <button onclick="jouer()">Jouer</button>
+      <button id="startButton" onclick="jouer()">Jouer</button>
       <button onclick="afficher('regles')">Règles</button>
       <button onclick="afficher('credits')">Crédits</button>
     </div>
 
     <div id="popup" class="popup"></div>
   </div>
+  <script src="../src/timer.js"></script>
 </body>
 </html>

@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         affichageTimer.textContent = `${minutes}:${secondes.toString().padStart(2, '0')}`;
 
-        // temps est écoulé
         if (tempsRestant <= 0) {
             localStorage.setItem('timerFini', 'true');
 
@@ -34,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             localStorage.removeItem('debutJeu');
 
-            document.getElementById('txt-zone-value').textContent = "Le temps est écoulé, vous êtes coincé dans la matrice pour toujours...";
+            document.getElementById('txt-zone-value').textContent = "granny est arrivé...";
             document.body.style.pointerEvents = 'none';
             document.getElementById('blackout').classList.add('active');
 
